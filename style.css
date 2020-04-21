@@ -1,0 +1,33 @@
+body{
+    background-image: linear-gradient(to right, rgb(197, 193, 193), white, rgb(197, 193, 193) );
+}
+main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 100px;
+    display: flex;
+
+    /*display: table;*/
+    /*text-align: center;
+    vertical-align: middle;*/
+}
+.nagy{
+    width: 800px;
+    height: 533px;
+}
+aside{
+    height: 503px;
+    opacity: 0.9;
+    padding: 15px;
+    background-image:linear-gradient(to bottom, ivory, rgb(217, 227, 235)) ;
+}
+.nyil {
+   height: 50px;
+   color: rgb(192, 191, 191);
+   margin-top: 241px;
+}
+
+#bal{
+    transform: rotate(0.5turn);
+}
