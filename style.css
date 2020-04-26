@@ -7,10 +7,8 @@ main{
     width: 50%;
     margin-top: 100px;
     display: flex;
+    position: relative;
 
-    /*display: table;*/
-    /*text-align: center;
-    vertical-align: middle;*/
 }
 #photo{
     width: 800px;
@@ -30,4 +28,40 @@ aside{
 
 #bal{
     transform: rotate(0.5turn);
+}
+.gery-container{
+    position: absolute;
+    background-color: black;
+    width: 800px;
+    height: 120px;
+    top: 413px;
+    left: 63px;
+    opacity: 0.7;
+}
+h1{
+    color: white;
+    font-family: 'Comic Neue';
+    margin: 0px;
+}
+p{
+    color: rgb(195, 195, 195);
+    margin: 5px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.thumbnail{
+    display: block;
+    border: 1px solid rgb(172, 171, 171);
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 5px;
+    width: 90px;
+    height: 60px;
 }
