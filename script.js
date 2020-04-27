@@ -32,11 +32,13 @@ $('#jobb').click(()=>{
 loadPhoto(currentPhoto);
 imagesData.forEach((item, index)=>{
     $('.container').append(`<div class="box" imagesData-index="${index}"><img class="thumbnail" src='${item}'/></div>`);
-    $('.thumbnail').on('click', (event)=>{
-        let indexClick = $(event.target).attr('imagesData-index');
+    $('.container').on('click', 'box', (event)=>{
+        let indexClick = $(event.target).closest('div').attr('imagesData-index');
         let numberIndex = parseInt(indexClick);
-        photoNumber = indexClick;
-        loadPhoto(photoNumber).highlight('img');
+        $('#photo').attr('src', imagesData[indexClick]);
+        $('#photo-title').text(imagesTitle[indexClick]);
+        $('#photo-description').text(imagesDescription[indexClick]);
+        console.log('Helo');
     });
 }
 );
