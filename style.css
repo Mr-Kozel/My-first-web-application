@@ -64,5 +64,16 @@ p{
     margin-top: 10px;
     margin-right: 5px;
     width: 90px;
-    height: 60px;
+}
+.title{
+    display: none;
+    position: absolute;
+    background: grey;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    top: -50px;
+}
+.thumbnail:hover .title{
+    display: block;
 }

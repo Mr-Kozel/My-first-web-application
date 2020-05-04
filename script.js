@@ -7,7 +7,7 @@ let imagesDescription = ['Zsinórban negyedik szezonját kezdi meg a Mercedesné
 let loadPhoto = (photoNumber) =>{
     $('#photo').attr('src', imagesData[photoNumber]);
     $('#photo-title').text(imagesTitle[photoNumber]);
-    $('#photo-description').text(imagesDescription[photoNumber]);
+    $('#photo-description').text(imagesDescription[photoNumber]);    
 }
 loadPhoto(currentPhoto);
 $('#bal').click(()=>{
@@ -27,18 +27,25 @@ $('#jobb').click(()=>{
     if(currentPhoto === -1){
         currentPhoto = 9;
     }
-        loadPhoto(currentPhoto);
+    loadPhoto(currentPhoto);
 });
 loadPhoto(currentPhoto);
 imagesData.forEach((item, index)=>{
-    $('.container').append(`<div class="box" imagesData-index="${index}"><img class="thumbnail" src='${item}'/></div>`);
+    $('.container').append(`<div class="box" imagesData-index="${index}"><div class="title"></div><img class="thumbnail" src='${item}'/></div>`);
+    
     $('.container').on('click', '.box', (event)=>{
         let indexClick = $(event.target).closest('.box').attr('imagesData-index');
         let numberIndex = parseInt(indexClick);
         $('#photo').attr('src', imagesData[indexClick]);
         $('#photo-title').text(imagesTitle[indexClick]);
         $('#photo-description').text(imagesDescription[indexClick]);
-        console.log('Helo');
     });
+    /*$('title').text(imagesTitle[photoNumber]);
+    $('.box').mouseover(cim() {
+        $('.title').attr('title', imagesTitle[indexClick]);
+        console.log('Helo');
+    })*/
+    
+    
 }
 );
