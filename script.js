@@ -32,8 +32,8 @@ $('#jobb').click(()=>{
 loadPhoto(currentPhoto);
 imagesData.forEach((item, index)=>{
     $('.container').append(`<div class="box" imagesData-index="${index}"><img class="thumbnail" src='${item}'/></div>`);
-    $('.container').on('click', 'box', (event)=>{
-        let indexClick = $(event.target).closest('div').attr('imagesData-index');
+    $('.container').on('click', '.box', (event)=>{
+        let indexClick = $(event.target).closest('.box').attr('imagesData-index');
         let numberIndex = parseInt(indexClick);
         $('#photo').attr('src', imagesData[indexClick]);
         $('#photo-title').text(imagesTitle[indexClick]);
