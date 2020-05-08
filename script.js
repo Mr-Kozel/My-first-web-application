@@ -7,7 +7,11 @@ let imagesDescription = ['Zsinórban negyedik szezonját kezdi meg a Mercedesné
 let loadPhoto = (photoNumber) =>{
     $('#photo').attr('src', imagesData[photoNumber]);
     $('#photo-title').text(imagesTitle[photoNumber]);
-    $('#photo-description').text(imagesDescription[photoNumber]);    
+    $('#photo-description').text(imagesDescription[photoNumber]);
+    /*if(photoNumber === indexClick){
+        let kiemel = indexClick;
+        $('.box').attr(`'imagesData-index="${indexClick}"'`).css('border', '3px solid black');
+    };*/
 }
 loadPhoto(currentPhoto);
 $('#bal').click(()=>{
@@ -32,13 +36,15 @@ $('#jobb').click(()=>{
 loadPhoto(currentPhoto);
 imagesData.forEach((item, index)=>{
     $('.container').append(`<div class="box" imagesData-index="${index}"><div class="title"></div><img class="thumbnail" src='${item}'/></div>`);
-    
     $('.container').on('click', '.box', (event)=>{
         let indexClick = $(event.target).closest('.box').attr('imagesData-index');
         let numberIndex = parseInt(indexClick);
         $('#photo').attr('src', imagesData[indexClick]);
         $('#photo-title').text(imagesTitle[indexClick]);
         $('#photo-description').text(imagesDescription[indexClick]);
+        if($('.box').attr(`'imagesData-index="${indexClick}"'`)===indexClick){
+            $(this).css('border', '8px solid black');
+        }
     });
     /*$('title').text(imagesTitle[photoNumber]);
     $('.box').mouseover(cim() {
