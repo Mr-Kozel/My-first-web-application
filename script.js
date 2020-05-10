@@ -1,4 +1,3 @@
-
 let currentPhoto = 0;
 let imagesData = ['Pictures/mercedes-1.jpg', 'Pictures/scuderia-ferrari-1.jpg', 'Pictures/red-bull-racing-1.jpg', 'Pictures/mclaren-1.jpg', 'Pictures/renault-f1-team-1.jpg', 'Pictures/scuderia-alphatauri-1.jpg', 'Pictures/racing-point-1.jpg', 'Pictures/alfa-romeo-racing-1.jpg','Pictures/haas-f1-team-1.jpg', 'Pictures/williams-1.jpg'];
 let imagesTitle = ['Mercedes', 'Ferrari', 'Red Bull', 'McLaren', 'Renault', 'Torro Rosso', 'Racing Point', 'Alfa Romeo', 'Haas', 'Williams'];
@@ -8,10 +7,6 @@ let loadPhoto = (photoNumber) =>{
     $('#photo').attr('src', imagesData[photoNumber]);
     $('#photo-title').text(imagesTitle[photoNumber]);
     $('#photo-description').text(imagesDescription[photoNumber]);
-    /*if(photoNumber === indexClick){
-        let kiemel = indexClick;
-        $('.box').attr(`'imagesData-index="${indexClick}"'`).css('border', '3px solid black');
-    };*/
 }
 loadPhoto(currentPhoto);
 $('#bal').click(()=>{
@@ -41,10 +36,12 @@ imagesData.forEach((item, index)=>{
         let numberIndex = parseInt(indexClick);
         $('#photo').attr('src', imagesData[indexClick]);
         $('#photo-title').text(imagesTitle[indexClick]);
-        $('#photo-description').text(imagesDescription[indexClick]);
-        if($('.box').attr(`'imagesData-index="${indexClick}"'`)===indexClick){
-            $(this).css('border', '8px solid black');
+        $('#photo-description').text(imagesDescription[indexClick] === indexClick);
+        if($('.box').attr(`'imagesData-index="${index}"'`) === currentPhoto){
+            $('.box').attr(`'imagesData-index="${indexClick}"'`).css('opacity', '1');
+            $('.box').attr(`'imagesData-index="${indexClick}"'`).css('width', '110px');
         }
+        console.log(indexClick);
     });
     /*$('title').text(imagesTitle[photoNumber]);
     $('.box').mouseover(cim() {
