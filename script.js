@@ -7,7 +7,7 @@ let loadPhoto = (currentPhoto) =>{
     $('#photo').attr('src', imagesData[currentPhoto]);
     $('#photo-title').text(imagesTitle[currentPhoto]);
     $('#photo-description').text(imagesDescription[currentPhoto]);
-       
+    $(`.thumbnail:eq("${currentPhoto}")`).addClass("mod");   
 }
 
 loadPhoto(currentPhoto);
@@ -44,15 +44,22 @@ imagesData.forEach((item, index)=>{
         $('#photo-title').text(imagesTitle[numberIndex]);
         $('#photo-description').text(imagesDescription[numberIndex]);
         currentPhoto = numberIndex;
-        if(currentPhoto === numberIndex){
+        /*if(currentPhoto === numberIndex){
             $(`.thumbnail:eq("${currentPhoto}")`).addClass("mod");
-        }else if(currentPhoto !== numberIndex){
-            $(`.thumbnail:eq("${currentPhoto}")`).removeClass("mod");
         };
+        $(`${currentPhoto}`).change(function() {
+            $(`.thumbnail:eq("${currentPhoto}")`).removeClass("mod");
+        });*/
+        /*if(currentPhoto === numberIndex){
+            $(`.thumbnail:eq("${currentPhoto}")`).addClass("mod");
+        };
+        if(currentPhoto != numberIndex){
+            $(`.thumbnail:eq("${currentPhoto}")`).removeClass("mod");
+        };*/
         
         console.log(currentPhoto);
     });
-
+    
     
     /*$('title').text(imagesTitle[photoNumber]);
     $('.box').mouseover(cim() {
