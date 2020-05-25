@@ -7,7 +7,37 @@ let loadPhoto = (currentPhoto) =>{
     $('#photo').attr('src', imagesData[currentPhoto]);
     $('#photo-title').text(imagesTitle[currentPhoto]);
     $('#photo-description').text(imagesDescription[currentPhoto]);
-    $(`.thumbnail:eq("${currentPhoto}")`).addClass("mod");   
+    if(currentPhoto === 0){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("0")`).addClass('mod');
+    } else if(currentPhoto === 1){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("1")`).addClass('mod');
+    } else if(currentPhoto === 2){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("2")`).addClass('mod');
+    } else if(currentPhoto === 3){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("3")`).addClass('mod');
+    } else if(currentPhoto === 4){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("4")`).addClass('mod');
+    } else if(currentPhoto === 5){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("5")`).addClass('mod');
+    } else if(currentPhoto === 6){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("6")`).addClass('mod');
+    } else if(currentPhoto === 7){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("7")`).addClass('mod');
+    } else if(currentPhoto === 8){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("8")`).addClass('mod');
+    } else if(currentPhoto === 9){
+        $('.thumbnail').removeClass('mod');
+        $(`.thumbnail:eq("9")`).addClass('mod');
+    }; 
 }
 
 loadPhoto(currentPhoto);
@@ -36,7 +66,7 @@ $('#jobb').click(()=>{
 loadPhoto(currentPhoto);
 
 imagesData.forEach((item, index)=>{
-    $('.container').append(`<div class="box" imagesData-index="${index}"><div class="title"></div><img class="thumbnail" src='${item}'/></div>`);
+    $('.container').append(`<div class="box" imagesData-index="${index}"><div class="title">${imagesTitle[index]}</div><img class="thumbnail" src='${item}'/></div>`);
     $('.container').on('click', '.box', (event)=>{
         let indexClick = $(event.target).closest('.box').attr('imagesData-index');
         let numberIndex = parseInt(indexClick);
@@ -44,28 +74,39 @@ imagesData.forEach((item, index)=>{
         $('#photo-title').text(imagesTitle[numberIndex]);
         $('#photo-description').text(imagesDescription[numberIndex]);
         currentPhoto = numberIndex;
-        /*if(currentPhoto === numberIndex){
-            $(`.thumbnail:eq("${currentPhoto}")`).addClass("mod");
-        };
-        $(`${currentPhoto}`).change(function() {
-            $(`.thumbnail:eq("${currentPhoto}")`).removeClass("mod");
-        });*/
-        /*if(currentPhoto === numberIndex){
-            $(`.thumbnail:eq("${currentPhoto}")`).addClass("mod");
-        };
-        if(currentPhoto != numberIndex){
-            $(`.thumbnail:eq("${currentPhoto}")`).removeClass("mod");
-        };*/
-        
+        if(currentPhoto === 0){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("0")`).addClass('mod');
+        } else if(currentPhoto === 1){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("1")`).addClass('mod');
+        } else if(currentPhoto === 2){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("2")`).addClass('mod');
+        } else if(currentPhoto === 3){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("3")`).addClass('mod');
+        } else if(currentPhoto === 4){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("4")`).addClass('mod');
+        } else if(currentPhoto === 5){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("5")`).addClass('mod');
+        } else if(currentPhoto === 6){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("6")`).addClass('mod');
+        } else if(currentPhoto === 7){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("7")`).addClass('mod');
+        } else if(currentPhoto === 8){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("8")`).addClass('mod');
+        } else if(currentPhoto === 9){
+            $('.thumbnail').removeClass('mod');
+            $(`.thumbnail:eq("9")`).addClass('mod');
+        };    
         console.log(currentPhoto);
     });
-    
-    
-    /*$('title').text(imagesTitle[photoNumber]);
-    $('.box').mouseover(cim() {
-        $('.title').attr('title', imagesTitle[indexClick]);
-        console.log('Helo');
-    })*/
-    
+    $(`.thumbnail:eq("0")`).addClass('mod');
 }
 );

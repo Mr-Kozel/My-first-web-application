@@ -66,22 +66,25 @@ p{
     margin-right: 5px;
     width: 90px;
     opacity: 0.8;
-    
+    position: relative;
+}
+.box{
+    position: relative;
 }
 .title{
     display: none;
-    position: absolute;
-    background: grey;
+    position: relative;
+    background: rgb(90, 90, 90);
     color: white;
     border-radius: 5px;
     padding: 5px;
-    top: -50px;
+    top: 10px;
+    text-align: center;
 }
-.thumbnail:hover{
-    opacity: 1;
-    width: 110px;
-    box-shadow: 10px, rgb(43, 42, 42);
+.box:hover .title{
+    display: block;
 }
+
 .mod{
     opacity: 1;
     width: 110px;
